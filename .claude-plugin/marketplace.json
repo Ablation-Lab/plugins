@@ -1,0 +1,96 @@
+{
+  "name": "ablation-lab",
+  "description": "Claude Code plugins from Ablation Lab. Each plugin is installed from its own GitHub repository.",
+  "owner": {
+    "name": "Ablation Lab",
+    "url": "https://github.com/Ablation-Lab"
+  },
+  "plugins": [
+    {
+      "name": "lore-lookup",
+      "displayName": "Lore Lookup",
+      "description": "Makes Claude answer questions about Claude, Claude Code and the Claude apps from Anthropic's official docs and release notes, with citations, instead of from memory. The plugin adds one skill and installs no hooks; an optional daily SessionStart hook that caches release notes is available only when the skill is installed manually in Claude Code (see the README).",
+      "source": {
+        "source": "github",
+        "repo": "Ablation-Lab/claude-lore"
+      },
+      "homepage": "https://github.com/Ablation-Lab/claude-lore"
+    },
+    {
+      "name": "cutproof",
+      "displayName": "Cutproof",
+      "description": "Proofread a video without watching it. Cutproof lines up your narration with what's on screen and flags typos, numbers that don't match the voiceover, text shown too briefly to read, and audio problems, with timestamps. Runs on your Windows PC (needs ffmpeg) and makes no network requests of its own.",
+      "source": {
+        "source": "github",
+        "repo": "Ablation-Lab/video-review-tool"
+      },
+      "homepage": "https://github.com/Ablation-Lab/video-review-tool"
+    },
+    {
+      "name": "stowdeck",
+      "displayName": "Stowdeck",
+      "description": "Stowdeck is a Windows app that saves your whole set of Claude Code sessions as a snapshot and restores it in one click, shows your recent and running sessions, and has a tab for your other terminal windows. This plugin gives Claude a skill and commands to list your sessions and snapshots, save a snapshot and open the app.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Ablation-Lab/stowdeck.git",
+        "path": "plugin"
+      },
+      "homepage": "https://github.com/Ablation-Lab/stowdeck"
+    },
+    {
+      "name": "seaready",
+      "displayName": "Seaready",
+      "description": "Checks a plugin repository before you submit it to Anthropic's plugin directory, and drafts answers for the submission form. Its script runs locally with Node.js and git and makes no network requests. The script reports pass, warn and fail on many of the portal's blocking rules and on Directory Policy problems a script can find: trigger wording, whether the README matches what the code does, chat-history reads, sample data and example prompts, hidden Unicode, line endings in a real git archive, shell-injection risks, personal email addresses in commit history, and name clashes with the listings it can see offline (Claude Code's local copy of the directory). On every run the skill then has Claude search GitHub, the plugin directory and the web for name clashes and similar plugins, so the skill as a whole does use the network; it reports what it finds with suggested \"How it compares\" text, and never edits the repo it checks.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Ablation-Lab/seaready.git",
+        "path": "plugin"
+      },
+      "homepage": "https://github.com/Ablation-Lab/seaready"
+    },
+    {
+      "name": "tangent-jar",
+      "displayName": "Tangent Jar",
+      "description": "Helps you stay on your main task during a focus session you start: when a side question comes up, Claude parks it in a parking list in your project, counts it against three tangent tokens per session, and nudges you back. After three, it still parks and still helps, with some playful pushback. Runs in Claude Code with Node.js; it writes only the parking list and makes no network requests.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Ablation-Lab/tangent-jar.git",
+        "path": "plugin"
+      },
+      "homepage": "https://github.com/Ablation-Lab/tangent-jar"
+    },
+    {
+      "name": "bench-diary",
+      "displayName": "Bench Diary",
+      "description": "Keeps your research docs up to date while you work: once you turn it on in a conversation, Claude logs research notes, decisions, anecdotes and new experiment ideas into the right doc without asking first, adds a note on how loosely related items do or don't connect, and tells you in one line what it logged, with an undo. Runs in Claude Code with Node.js; writes only to the docs you list, its bench-diary.json settings file and a small .bench-diary folder, and makes no network requests.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Ablation-Lab/bench-diary.git",
+        "path": "plugin"
+      },
+      "homepage": "https://github.com/Ablation-Lab/bench-diary"
+    },
+    {
+      "name": "langparity",
+      "displayName": "Langparity",
+      "description": "Checks a translation against its source before you ship it: a local script lines up the source and target strings or document sections and reports missing and extra parts, broken placeholders, tags, links and formatting, changed numbers and untranslated text, then Claude reads every pair for meaning drift and tone and suggests a corrected translation for each problem it confirms. Works with JSON and ARB, gettext .po, .properties, Apple .strings, Android strings.xml, XLIFF, and Markdown or text documents. It reads only the files you give it (or the matching file Claude finds and names), writes its report to a temporary folder, and makes no network requests.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Ablation-Lab/langparity.git",
+        "path": "plugin"
+      },
+      "homepage": "https://github.com/Ablation-Lab/langparity"
+    },
+    {
+      "name": "council-dial",
+      "displayName": "Council Dial",
+      "description": "Runs a review council of Claude subagents the way you choose, and logs which way it ran: specialised or generalist reviewers; judged, pooled or consensus combining; optional debate and sequential rounds; and an optional single-reviewer baseline to compare against. A local script turns your choices into the reviewer and judge briefs, then records each run's type and results (findings, confirmed, dismissed, fixes that later failed) in a review log in your project, and compares the types over time. Runs in Claude Code with Node.js; the script writes only the review log and makes no network requests.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Ablation-Lab/council-dial.git",
+        "path": "plugin"
+      },
+      "homepage": "https://github.com/Ablation-Lab/council-dial"
+    }
+  ]
+}
