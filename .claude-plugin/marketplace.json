@@ -9,7 +9,7 @@
     {
       "name": "lore-lookup",
       "displayName": "Lore Lookup",
-      "description": "Makes Claude answer questions about Claude, Claude Code and the Claude apps from Anthropic's official docs and release notes, with citations, instead of from memory. The plugin adds one skill and installs no hooks; an optional daily SessionStart hook that caches release notes is available only when the skill is installed manually in Claude Code (see the README).",
+      "description": "Makes Claude answer questions about Claude, Claude Code and the Claude apps from Anthropic's docs, help pages and release notes, with citations, instead of from memory. The plugin adds one skill and installs no hooks; an optional daily SessionStart hook that caches release notes is available only when the skill is installed manually in Claude Code (see the README).",
       "source": {
         "source": "github",
         "repo": "Ablation-Lab/claude-lore"
